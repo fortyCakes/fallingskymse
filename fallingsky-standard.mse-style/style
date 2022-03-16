@@ -1,0 +1,82 @@
+﻿mse version: 2.0.0
+game: fallingsky
+short name: Standard
+installer group: fallingsky/standard
+icon: card-sample.png
+position hint: 01
+
+version: 2022-03-16
+depends on:
+	package: fallingsky.mse-game
+	version: 2022-03-16
+
+card width: 480
+card height: 672
+card dpi: 150
+
+#Fonts used:
+# Engravers MT
+# Goudy Old Style		
+
+card style:
+	############################# Background stuff
+	card type:
+		left:	0
+		top:	0
+		width:	480
+		height:	672
+		z index: 2
+		render style: image
+		popup style: in place
+		choice images:
+			alchemy:		alchemy.png
+		mask: 	alchemy-mask.png
+			
+	red transparency:
+		left: 0
+		top: 0
+		width: 480
+		height: 672
+		z index: -2
+		render style: image
+		choice images: 
+			on:		alchemy-red.png
+			off:	alchemy-none.png
+
+	############################# Name line
+	name:
+		left: 10
+		top : 30
+		width: 460
+		height: 30
+		alignment: middle center
+		padding bottom: 0
+		z index: 0
+		font:
+			name: Engravers MT
+			size: 20
+			color: rgb(0,255,255)
+
+
+	############################# Text box
+	rule text:
+		left: 40
+		top : 60
+		width: 400
+		height: 440
+		font:
+			name: Goudy Old Style
+			size: 18
+			scale down to: 6
+			color: rgb(0,255,255)
+		alignment:	middle center
+		z index: 1
+		padding left:   2
+		padding top:    2
+		padding right:  -3
+		padding bottom: 0
+		line height hard: 0.7
+		line height line: 0.7
+		line height soft: 0.7
+		line height hard max: 1.2
+		line height line max: 1.2
